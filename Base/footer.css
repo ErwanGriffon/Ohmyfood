@@ -1,0 +1,37 @@
+.footer {
+  background-color: #353535;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.footer__logo {
+  color: white;
+  font-family: "Shrikhand", "cursive";
+  margin: 0;
+  font-size: 19px;
+  margin-bottom: 16px;
+}
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__listElt {
+  margin: 8px 0;
+}
+.footer__listElt:first-child {
+  margin-top: 0;
+}
+.footer__listElt:last-child {
+  margin-bottom: 0;
+}
+.footer__link {
+  color: white;
+  text-decoration: none;
+}
+.footer__icon {
+  width: 19px;
+  margin-right: 8px;
+}/*# sourceMappingURL=footer.css.map */
