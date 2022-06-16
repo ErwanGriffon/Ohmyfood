@@ -15,7 +15,12 @@ header {
     }
     @media screen and (min-width: 992px) {
       .header__logo {
-        width: 35%;
+        width: 25%;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      .header__logo {
+        width: 15%;
       }
     }
 }
