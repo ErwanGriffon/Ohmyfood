@@ -220,3 +220,75 @@ $color-tertiary: #99E2D0;
   @include button(primary);
   cursor: pointer;
 }
+
+@keyframes loader{
+  0%{
+      background-color: rgba(196,195,192,1);
+  }
+  25%{
+      background-color:rgba(196,195,192,1);;
+  }
+  50%{
+      background-color:rgba(196,195,192,1);
+  }
+  80%{
+      background-color:rgba(196,195,192,0.5);
+  }
+  100%{
+      background-color:rgba(255, 255, 255, 0.5);
+      visibility: hidden;
+  }
+}
+
+@keyframes boing{
+  0%{
+      transform: translateY(0);
+  }
+  25%{
+      transform: translateY(30px);
+  }
+  75%{
+      transform: translateY(-30px);
+  }
+  100%{
+      transform: translateY(0);
+  }
+}
+
+.loader{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color:#f6f6f6;
+  position: fixed;
+  z-index: 1;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loader 1s;
+  animation-fill-mode: both;
+  &__circle{
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      margin-right: 50px;
+      display: inline-block;
+      animation: boing 2s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      &--1{
+          background-color: $color-primary;
+          animation-delay: 0.1s;
+      }
+      &--2{
+          background-color: $color-secondary;
+          animation-delay: 0.2s;
+      }
+      &--3{
+          background-color: $color-tertiary;
+          animation-delay: 0.4s;
+      }
+  }
+}
