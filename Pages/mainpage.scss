@@ -5,19 +5,10 @@ $box-shadow: 0 8px 16px rgba(black, 0.15) !default;
 
 @keyframes loader{
   0%{
-      background-color: rgba(196,195,192,1);
-  }
-  25%{
-      background-color:rgba(196,195,192,1);;
-  }
-  50%{
-      background-color:rgba(196,195,192,1);
-  }
-  80%{
-      background-color:rgba(196,195,192,0.5);
+      background-color: rgb(255, 255, 255);
   }
   100%{
-      background-color:rgba(255, 255, 255, 0.5);
+      background-color:rgb(255, 255, 255);
       visibility: hidden;
   }
 }
@@ -123,7 +114,7 @@ $box-shadow: 0 8px 16px rgba(black, 0.15) !default;
       background-color: #f6f6f6;
       display: flex;
       position: relative;
-  
+    
       &:first-child {
         margin-top: 0;
         margin-left: 12px;
@@ -156,7 +147,50 @@ $box-shadow: 0 8px 16px rgba(black, 0.15) !default;
     margin-left: 16px;
     margin-right: 16px;
   }
+
+&__step_3 {
+  padding: 24px;
+  margin: 16px 0 16px 12px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
+  background-color: #9256dc1f;
+  display: flex;
+  position: relative;
+
+  &:first-child {
+    margin-top: 0;
+    margin-left: 12px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    counter-increment: compteListe 1;
+    content: counter(compteListe) " ";
+    background: $color-primary;
+    height: 24px;
+    width: 24px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    left: -12px;
+  }
+  &:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  }
 }
+&__icon{
+color: grey;
+margin-left: 16px;
+margin-right: 16px;
+}
+}
+
 
 .restaurants{
   &__title{
@@ -293,7 +327,7 @@ $box-shadow: 0 8px 16px rgba(black, 0.15) !default;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: loader 1s;
+    animation: loader 3s;
     animation-fill-mode: both;
     &__circle{
         height: 30px;
