@@ -262,13 +262,14 @@ $color-tertiary: #99E2D0;
   left: 0;
   background-color:#f6f6f6;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   opacity: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: loader 1s;
   animation-fill-mode: both;
+
   &__circle{
       height: 30px;
       width: 30px;
