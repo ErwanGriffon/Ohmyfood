@@ -19,115 +19,6 @@ $color-tertiary: #99E2D0;
   }
 }
 
- @-webkit-keyframes bounce-in-top {
-  0% {
-    -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  38% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  55% {
-    -webkit-transform: translateY(-65px);
-            transform: translateY(-65px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  72% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  81% {
-    -webkit-transform: translateY(-28px);
-            transform: translateY(-28px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  90% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  95% {
-    -webkit-transform: translateY(-8px);
-            transform: translateY(-8px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-}
-@keyframes bounce-in-top {
-  0% {
-    -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  38% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  55% {
-    -webkit-transform: translateY(-65px);
-            transform: translateY(-65px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  72% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  81% {
-    -webkit-transform: translateY(-28px);
-            transform: translateY(-28px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  90% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-  95% {
-    -webkit-transform: translateY(-8px);
-            transform: translateY(-8px);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-}
-
-.bounce-in-top {
-	-webkit-animation: bounce-in-top 1.1s both;
-	        animation: bounce-in-top 1.1s both;
-}
 
 .heroImg {
   max-width: 100%;
@@ -206,7 +97,6 @@ $color-tertiary: #99E2D0;
     }
   }
 }
-
 
 .submenus {
   display: grid;
@@ -287,43 +177,6 @@ $color-tertiary: #99E2D0;
     transition-duration: 0.5s;
   }
 
-  &__delay-0 {
-    -webkit-animation: bounce-in-top 1.1s both;
-    animation: bounce-in-top 1.1s both;
-  }
-  &__delay-1 {
-    -webkit-animation: bounce-in-top 1.1s both;
-    animation: bounce-in-top 1.1s both;
-  }
-  &__delay-2 {
-    -webkit-animation: bounce-in-top 1.1s both;
-    animation: bounce-in-top 1.1s both;
-  }
-  &__delay-3 {
-    -webkit-animation: bounce-in-top 1.1s 1s both;
-    animation: bounce-in-top 1.1s both;
-  }
-  &__delay-4 {
-    -webkit-animation: bounce-in-top 1.1s 1s both;
-    animation: bounce-in-top 1.1s both;
-  }
-  &__delay-5 {
-    -webkit-animation: bounce-in-top 1.1s 1s both;
-    animation: bounce-in-top 1.1s both;
-  }
-  &__delay-6 {
-    -webkit-animation: bounce-in-top 1.1s 2s both;
-    animation: bounce-in-top 1.1s both;
-  }
-  &__delay-7 {
-    -webkit-animation: bounce-in-top 1.1s 2s both;
-    animation: bounce-in-top 1.1s both;
-  }
-  &__delay-8 {
-    -webkit-animation: bounce-in-top 1.1s 2s both;
-    animation: bounce-in-top 1.1s both;
-  }
-
   &:hover &__confirmation {
     margin-right: -16px;
   }
@@ -347,6 +200,12 @@ $color-tertiary: #99E2D0;
 
   &__icon {
     color: $color-tertiary;
+  }
+}
+
+@for $i from 0 to 9 {
+  .delay-#{$i} {
+    animation-delay:  #{$i/10}s;
   }
 }
 
