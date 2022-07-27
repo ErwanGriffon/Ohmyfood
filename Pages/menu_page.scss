@@ -294,3 +294,9 @@ $color-tertiary: #99E2D0;
       }
   }
 }
+
+@media screen and (max-width: 375px) {
+  .loader{
+    padding-left: 25px;
+  }
+}

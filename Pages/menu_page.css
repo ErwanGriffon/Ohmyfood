@@ -331,4 +331,10 @@
   background-color: #99E2D0;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
+}
+
+@media screen and (max-width: 375px) {
+  .loader {
+    padding-left: 25px;
+  }
 }/*# sourceMappingURL=menu_page.css.map */
