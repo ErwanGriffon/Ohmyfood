@@ -48,15 +48,14 @@
   display: flex;
   justify-content: center;
   padding: 20px 16px;
-  background-color: rgb(243, 243, 243);
-  font-size: 19px;
+  background-color: rgb(240, 239, 239);
+  font-size: 16px;
   position: relative;
 }
-.location__icon {
-  margin-right: 16px;
-}
-.location__text {
+
+.local__text {
   font-weight: 700;
+  margin-left: 15px;
 }
 
 .pres {
@@ -75,7 +74,7 @@
   border: 0;
   padding: 12px 24px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 15px;
   border-radius: 100px;
   color: var(c);
   background-color: #9356DC;
@@ -184,6 +183,10 @@
   color: grey;
   margin-left: 16px;
   margin-right: 16px;
+}
+
+#icone3 {
+  color: #9356DC;
 }
 
 .restaurants__title {
@@ -316,8 +319,8 @@
   border-radius: 50%;
   margin-right: 50px;
   display: inline-block;
-  -webkit-animation: boing 2s;
-          animation: boing 2s;
+  -webkit-animation: boing 3s;
+          animation: boing 3s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
@@ -339,6 +342,11 @@
           animation-delay: 0.4s;
 }
 
+@media screen and (max-width: 375px) {
+  .loader {
+    padding-left: 25px;
+  }
+}
 @media screen and (min-width: 992px) {
   .card__btn {
     margin-left: 90%;

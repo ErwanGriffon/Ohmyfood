@@ -32,7 +32,7 @@ $box-shadow: 0 8px 16px rgba(black, 0.15) !default;
     border: 0;
     padding: 12px 24px;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     border-radius: 100px;
     color: var(c);
     background-color: #9356DC;
@@ -49,16 +49,15 @@ $box-shadow: 0 8px 16px rgba(black, 0.15) !default;
     display: flex;
     justify-content: center;
     padding: 20px 16px;
-    background-color: rgb(243, 243, 243);
-    font-size: 19px;
+    background-color: rgb(240, 239, 239);
+    font-size: 16px;
     position: relative;
+}
+.local { 
   
-    &__icon {
-      margin-right: 16px;
-    }
-  
-    &__text {
+  &__text {
       font-weight: 700;
+      margin-left: 15px;
     }
   }
 
@@ -191,7 +190,9 @@ margin-right: 16px;
 }
 }
 
-
+#icone3{
+  color: $color-primary ;
+}
 .restaurants{
   &__title{
     margin-left: 15px;
@@ -329,13 +330,14 @@ margin-right: 16px;
     justify-content: center;
     animation: loader 3s;
     animation-fill-mode: both;
+
     &__circle{
         height: 30px;
         width: 30px;
         border-radius: 50%;
         margin-right: 50px;
         display: inline-block;
-        animation: boing 2s;
+        animation: boing 3s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
         &--1{
@@ -350,6 +352,12 @@ margin-right: 16px;
             background-color: $color-tertiary;
             animation-delay: 0.4s;
         }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .loader{
+      padding-left: 25px;
     }
 }
 
