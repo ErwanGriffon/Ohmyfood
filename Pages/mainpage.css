@@ -206,7 +206,6 @@
   margin-top: 15px;
   margin-bottom: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  z-index: 1;
 }
 .card__img {
   height: 175px;
