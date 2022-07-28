@@ -1,3 +1,19 @@
+@-webkit-keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .heroImg {
   max-width: 100%;
   max-height: 512px;
@@ -100,6 +116,8 @@
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
+  -webkit-animation: itemAppear 0.6s;
+          animation: itemAppear 0.6s;
   -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
           animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   -webkit-animation-fill-mode: both;
@@ -219,7 +237,6 @@
   font-weight: 500;
   font-size: 15px;
   border-radius: 100px;
-  color: var(c);
   background-color: #9356DC;
   cursor: pointer;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
@@ -285,56 +302,5 @@
   }
   100% {
     transform: translateY(0);
-  }
-}
-.loader {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #f6f6f6;
-  position: fixed;
-  z-index: 3;
-  opacity: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  -webkit-animation: loader 3s;
-          animation: loader 3s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.loader__circle {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  margin-right: 50px;
-  display: inline-block;
-  -webkit-animation: boing 2s;
-          animation: boing 2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-.loader__circle--1 {
-  background-color: #9356DC;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-.loader__circle--2 {
-  background-color: #FF79DA;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-.loader__circle--3 {
-  background-color: #99E2D0;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-
-@media screen and (max-width: 375px) {
-  .loader {
-    padding-left: 25px;
   }
 }/*# sourceMappingURL=menu_page.css.map */

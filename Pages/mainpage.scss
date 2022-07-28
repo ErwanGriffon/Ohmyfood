@@ -34,7 +34,6 @@ $box-shadow: 0 8px 16px rgba(black, 0.15) !default;
     font-weight: 500;
     font-size: 15px;
     border-radius: 100px;
-    color: var(c);
     background-color: #9356DC;
     cursor: pointer;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
@@ -139,6 +138,7 @@ $box-shadow: 0 8px 16px rgba(black, 0.15) !default;
       }
       &:hover {
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+        background-color: #f9f6f6;
       }
   }
   &__icon{
@@ -181,6 +181,7 @@ $box-shadow: 0 8px 16px rgba(black, 0.15) !default;
   }
   &:hover {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    background-color: #9b64df1f;
   }
 }
 &__icon{
@@ -211,6 +212,7 @@ margin-right: 16px;
     margin-top: 15px;
     margin-bottom: 15px;
     box-shadow: $box-shadow;
+    z-index: 1;
   
     &__img {
       height: 175px;
@@ -263,6 +265,7 @@ margin-right: 16px;
       cursor: pointer;
       position: absolute;
       margin-left: 80%;
+      z-index: 2;
       background-color: black;
       
       &:hover::before {
@@ -288,9 +291,11 @@ margin-right: 16px;
       position : absolute;
       top: 0;
       left: 0;
+      pointer-events: none;
       height: 100%;
       width: 100%;
       display:flex;
+      z-index: 2;
       align-items:center;
       justify-content:center;
       mix-blend-mode: lighten;
